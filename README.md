@@ -8,10 +8,9 @@ Nパワープラスは、土壌中の微生物群に栄養を与え、活性化�
 
 ## 技術スタック
 
-- HTML5
-- CSS3
-- JavaScript
-- Tailwind CSS
+- [Next.js](https://nextjs.org/) - Reactフレームワーク
+- [Tailwind CSS](https://tailwindcss.com/) - スタイリング
+- [Font Awesome](https://fontawesome.com/) - アイコン
 
 ## 主な機能
 
@@ -20,28 +19,59 @@ Nパワープラスは、土壌中の微生物群に栄養を与え、活性化�
 - 料金・プラン表示
 - お問い合わせ機能
 
-## ローカル環境での実行方法
+## 開発方法
 
-1. リポジトリをクローン
-```
-git clone https://github.com/takamashinichi/npowerplus.git
-```
+### 前提条件
 
-2. プロジェクトディレクトリに移動
-```
+- Node.js (16.x以降)
+- npm (8.x以降)
+
+### インストール
+
+```bash
+# リポジトリのクローン
+git clone https://github.com/yourusername/npowerplus.git
 cd npowerplus
+
+# 依存関係のインストール
+npm install
 ```
 
-3. ローカルサーバーを起動（Pythonの例）
-```
-python -m http.server 8000
+### 開発サーバーの起動
+
+```bash
+npm run dev
 ```
 
-4. ブラウザで以下のURLにアクセス
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて、結果を確認してください。
+
+### ビルド
+
+```bash
+npm run build
 ```
-http://localhost:8000
+
+### 本番サーバーの起動
+
+```bash
+npm run start
+```
+
+## ディレクトリ構造
+
+```
+npowerplus/
+├── app/               # Next.jsアプリケーションコード
+│   ├── components/    # Reactコンポーネント
+│   ├── page.js        # ホームページ
+│   └── layout.js      # レイアウト
+├── public/            # 静的ファイル
+│   └── images/        # 画像ファイル
+└── ...                # その他の設定ファイル
 ```
 
 ## ライセンス
 
 © 2024 Nパワープラス® All Rights Reserved. 
+
+このプロジェクトは非公開です。無断での使用、配布、改変は禁止されています。 
