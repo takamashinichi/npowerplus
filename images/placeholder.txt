@@ -1,0 +1,11 @@
+画像プレースホルダー用のファイルです。このディレクトリに以下の画像ファイルが必要です：
+
+- logo.png
+- main-visual.jpg
+- banner.jpg
+- product1.jpg
+- product2.jpg
+- product3.jpg
+- product4.jpg
+- product5.jpg
+- product6.jpg 
