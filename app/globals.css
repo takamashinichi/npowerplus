@@ -3,31 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --primary: #4CAF50;
-  --secondary: #8d6e63;
-  --accent: #FF4500;
-  --light: #f5f5f5;
-  --dark: #333333;
+  --primary: #10B981;
+  --secondary: #6366F1;
+  --accent: #F59E0B;
+  --light: #F9FAFB;
+  --dark: #1F2937;
+  --background: #FFFFFF;
 }
 
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: var(--dark);
-  background: white;
+  background: var(--background);
+  line-height: 1.6;
 }
 
-@keyframes cloud-move {
-  0% { transform: translateX(-300px); }
-  100% { transform: translateX(calc(100vw + 300px)); }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-.cloud {
-  animation: cloud-move linear infinite;
-  animation-direction: normal;
-}
-
-.text-balance {
-  text-wrap: balance;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 @keyframes fadeInUp {
@@ -44,4 +42,33 @@ body {
 .animate-fadeIn {
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+@keyframes cloud-move {
+  0% { transform: translateX(-300px); }
+  100% { transform: translateX(calc(100vw + 300px)); }
+}
+
+.cloud {
+  animation: cloud-move linear infinite;
+  animation-direction: normal;
+}
+
+.text-balance {
+  text-wrap: balance;
 } 

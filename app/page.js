@@ -8,24 +8,23 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
       <Header />
-      <main>
-        <News />
-        <div className="container mx-auto px-4 py-12">
-          <SalesLetter />
-          
-          <hr className="my-10 border-t border-gray-300" />
-          
-          <InfoSection />
-          
-          <hr className="my-10 border-t border-gray-300" />
-          
-          <ProductList />
+      <main className="relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="relative">
+          <News />
+          <div className="container mx-auto px-4 py-16 space-y-16">
+            <SalesLetter />
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <InfoSection />
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <ProductList />
+          </div>
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 } 
