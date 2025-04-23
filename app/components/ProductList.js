@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProductList() {
   useEffect(() => {
@@ -27,25 +28,25 @@ export default function ProductList() {
       id: 1,
       name: '植物用肥料　Nパワープラス®（250ml）12本',
       price: '¥66,000',
-      image: '/images/product1.jpg'
+      image: '/images/items/n-power_12set.avif'
     },
     {
       id: 2,
       name: '植物用肥料　Nパワープラス®（250ml）１本＋スプレー（350ml）１個',
       price: '¥6,600',
-      image: '/images/product2.jpg'
+      image: '/images/items/n-power_ spray.avif'
     },
     {
       id: 3,
       name: '植物用肥料　Nパワープラス®（250ml）３本',
       price: '¥16,500',
-      image: '/images/product3.jpg'
+      image: '/images/items/n-power_3set.avif'
     },
     {
       id: 4,
       name: '植物用肥料　Nパワープラス®（250ml）１本',
       price: '¥5,500',
-      image: '/images/product4.jpg'
+      image: '/images/items/n-power_1set.avif'
     }
   ];
   
@@ -60,8 +61,14 @@ export default function ProductList() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {products.map(product => (
           <div key={product.id} className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-            <div className="h-[280px] bg-blue-50 relative flex items-center justify-center">
-              <span className="text-primary font-bold">製品画像</span>
+            <div className="h-[280px] relative">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2 h-[50px] overflow-hidden">

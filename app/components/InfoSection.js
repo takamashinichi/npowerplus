@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function InfoSection() {
   useEffect(() => {
@@ -29,14 +30,27 @@ export default function InfoSection() {
           <p className="text-gray-700 leading-relaxed">《安全性》Nパワープラスは、すべて天然原料から作られています。
           土には、もともと多様で有用な微生物群がバランスを保ちながら生存しています。そこへ、外来の微生物を投入するとバランスが崩れ、在来の微生物群がバランスを崩し、その結果、土地を劣化させるという結論に至りました。 そこで発想を転換し、微生物群を増やすための栄養の研究開発に進み、20年以上かけて製品化したのがNパワープラスです。Nパワーの成分はすべて天然原料に由来し、安心安全です。微生物群が活性化し、飛躍的に増えることで、これまでの化学肥料と農薩で劣化してきた土が驚くほど改良できたのです。</p>
         </div>
-        <div className="md:w-1/2 h-[300px] bg-green-50 flex items-center justify-center font-bold text-green-800 rounded-lg">
-          Nパワープラス® 製品画像
+        <div className="md:w-1/2 h-[300px] relative rounded-lg overflow-hidden">
+          <Image
+            src="/images/items/n-power.avif"
+            alt="Nパワープラス® 製品画像"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
         </div>
       </div>
       
       <div className="flex flex-col md:flex-row gap-8 items-center opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-        <div className="md:w-1/2 order-2 md:order-1 h-[300px] bg-green-50 flex items-center justify-center font-bold text-green-800 rounded-lg">
-          天恵力プラス 製品画像
+        <div className="md:w-1/2 order-2 md:order-1 h-[300px] relative rounded-lg overflow-hidden">
+          <Image
+            src="/images/items/tenkeiriki.avif"
+            alt="天恵力プラス 製品画像"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <div className="md:w-1/2 order-1 md:order-2">
           <h3 className="text-2xl font-bold mb-4 text-primary">酪農改良資材・動物用飼料 天恵力プラス</h3>
