@@ -47,6 +47,24 @@ export default function ProductList() {
       name: '植物用肥料　Nパワープラス®（250ml）１本',
       price: '¥5,500',
       image: '/images/items/n-power_1set.avif'
+    },
+    {
+      id: 5,
+      name: '植物用肥料　Nパワープラス®（1L）１本',
+      price: '¥16,500',
+      image: '/images/items/n-power_1l.avif'
+    },
+    {
+      id: 6,
+      name: '植物用肥料　Nパワープラス®（1L × 6本入り）１箱',
+      price: '¥99,000',
+      image: '/images/items/n-power_1l-6.avif'
+    },
+    {
+      id: 7,
+      name: '動物用飼料　天恵力プラス®（10L × 1本入り）１箱',
+      price: '¥88,000',
+      image: '/images/items/tenkeiriki_10l.avif'
     }
   ];
   
@@ -58,23 +76,23 @@ export default function ProductList() {
         Nパワープラス（NPOWER）®は微生物のエサ。⼭の腐葉⼟と同じような、⾃然に近い環境を畑に作ることが可能となるので、作物が本来の⽣命⼒を発揮しながら力強く育ちます。
       </p>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
         {products.map(product => (
-          <div key={product.id} className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-            <div className="h-[280px] relative">
+          <div key={product.id} className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg flex flex-col">
+            <div className="h-[200px] sm:h-[240px] relative">
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-contain p-2 sm:p-4"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 h-[50px] overflow-hidden">
+            <div className="px-3 sm:px-4 pb-3 sm:pb-4 pt-0 flex-grow flex flex-col">
+              <h3 className="text-[0.9rem] sm:text-[1.1rem] font-semibold mb-2 min-h-[40px] sm:min-h-[48px] line-clamp-2">
                 {product.name}
               </h3>
-              <p className="font-bold text-xl">{product.price}</p>
+              <p className="font-bold text-lg sm:text-xl mt-auto">{product.price}</p>
             </div>
           </div>
         ))}

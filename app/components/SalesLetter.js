@@ -1,11 +1,13 @@
 export default function SalesLetter() {
   return (
-    <section className="max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-10 text-balance">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 leading-tight bg-gradient-to-r from-primary to-green-700 bg-clip-text text-transparent drop-shadow-sm animate-fadeIn overflow-hidden" style={{ animationDelay: '0.1s', wordBreak: 'keep-all', overflowWrap: 'break-word', maxWidth: '100%' }}>
+    <section className="max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-10">
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-10 leading-tight bg-gradient-to-r from-primary to-green-700 bg-clip-text text-transparent drop-shadow-sm animate-fadeIn overflow-hidden" style={{ animationDelay: '0.1s', wordBreak: 'keep-all', overflowWrap: 'break-word', maxWidth: '100%' }}>
         自然の力で土を蘇らせ、植物を輝かせる奇跡の栄養剤
       </h1>
       
-      <h2 className="text-2xl font-bold text-primary mt-10 mb-4">「なぜあなたの植物は元気がないのか？答えは土の中にあります」</h2>
+      <h2 className="text-2xl font-bold text-primary mt-10 mb-4 md:whitespace-nowrap">
+        「なぜあなたの植物は元気がないのか？答えは土の中にあります」
+      </h2>
       
       <p className="mb-4">親愛なる園芸・農業愛好家の皆様、</p>
       <p className="mb-4">あなたはこんな経験をしたことはありませんか？</p>

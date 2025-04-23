@@ -15,7 +15,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative">
           <News />
-          <div className="container mx-auto px-4 py-16 space-y-16">
+          <div className="container mx-auto px-4 py-4 md:py-16 space-y-4 md:space-y-16">
             <SalesLetter />
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
             <InfoSection />
