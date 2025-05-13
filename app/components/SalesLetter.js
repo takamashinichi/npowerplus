@@ -1,12 +1,12 @@
 export default function SalesLetter() {
   return (
-    <section className="max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-10">
+    <section className="max-w-3xl mx-auto px-3 md:px-8 py-8 md:py-10">
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-10 leading-tight bg-gradient-to-r from-primary to-green-700 bg-clip-text text-transparent drop-shadow-sm animate-fadeIn overflow-hidden" style={{ animationDelay: '0.1s', wordBreak: 'keep-all', overflowWrap: 'break-word', maxWidth: '100%' }}>
-        自然の力で土を蘇らせ、植物を輝かせる奇跡の栄養剤
+        自然の力で土を蘇らせ、植物を輝かせる<br className="md:hidden" />奇跡の栄養剤
       </h1>
       
       <h2 className="text-2xl font-bold text-primary mt-10 mb-4 md:whitespace-nowrap">
-        「なぜあなたの植物は元気がないのか？答えは土の中にあります」
+        「なぜあなたの植物は元気がないのか？<br className="md:hidden" />答えは土の中にあります」
       </h2>
       
       <p className="mb-4">親愛なる園芸・農業愛好家の皆様、</p>
@@ -90,6 +90,8 @@ export default function SalesLetter() {
       <p className="mb-4">しかし、Nパワープラス®を使えば、自然界の本来あるべき状態—山の腐葉土のような豊かな土壌環境—を取り戻すことができます。</p>
       
       <p className="font-bold mb-6">あなたの畑や庭を、本来あるべき生命力あふれる場所に戻しませんか？</p>
+
+      
       
       <h2 className="text-2xl font-bold text-primary mt-10 mb-4">【Nパワープラス®の使い方】</h2>
       

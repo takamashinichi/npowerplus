@@ -5,6 +5,7 @@ import SalesLetter from './components/SalesLetter';
 import InfoSection from './components/InfoSection';
 import ProductList from './components/ProductList';
 import Footer from './components/Footer';
+import ProductInfo from './components/ProductInfo';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             <InfoSection />
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
             <ProductList />
+            <ProductInfo />
           </div>
         </div>
       </main>

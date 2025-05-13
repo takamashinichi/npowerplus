@@ -1,13 +1,24 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const cloudsRef = useRef(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const backgroundImages = [
+    '/images/visual/image_4.jpg',
+    '/images/visual/image_13.jpg',
+    '/images/visual/image_51.jpg',
+    '/images/visual/image_73.jpg'
+  ];
   
   useEffect(() => {
     const cloudsContainer = cloudsRef.current;
     
+    /*
     if (cloudsContainer) {
       // 雲の生成
       for (let i = 0; i < 5; i++) {
@@ -31,27 +42,60 @@ export default function Header() {
         cloud.appendChild(after);
         cloudsContainer.appendChild(cloud);
       }
-    }
-  }, []);
-  
+    }*/
+      let current = currentImageIndex;
+
+      const startTransition = () => {
+        const next = (current + 1) % backgroundImages.length;
+        setIsTransitioning(true);
+        setNextImageIndex(next);
+    
+        setTimeout(() => {
+          setCurrentImageIndex(next);
+          setIsTransitioning(false);
+          current = next; // ←次のループで使うために更新！
+        }, 1000);
+      };
+    
+      const interval = setInterval(startTransition, 5000);
+    
+      return () => clearInterval(interval);
+    }, [backgroundImages.length]);
+
   return (
-    <header className="relative pt-16">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-48 h-48 md:w-52 md:h-52">
-        <div className="w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex flex-col items-center justify-center text-white relative overflow-hidden shadow-2xl hover-scale">
-          <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-          <div className="flex items-center justify-center h-[70%] w-full relative z-10">
-            <span className="text-5xl mb-2 animate-float">🌱</span>
+    <header className="relative">
+      <div className="h-[40vh] md:h-[70vh] relative flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0">
+            <Image
+              src={backgroundImages[currentImageIndex]}
+              alt="現在の背景画像"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
-          <div className="bg-gradient-to-br from-secondary/90 to-primary/90 w-full h-[30%] flex flex-col items-center justify-center relative z-10">
-            <span className="font-bold text-2xl leading-tight text-center tracking-wider">Nパワー</span>
-            <span className="font-bold text-2xl leading-tight text-center tracking-wider">プラス</span>
+          <div className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-100' : 'opacity-0'}`}>
+            <Image
+              src={backgroundImages[nextImageIndex]}
+              alt="次の背景画像"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
+          <div id="clouds" ref={cloudsRef} className="absolute inset-0 z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30"></div>
         </div>
-      </div>
-      
-      <div className="h-[60vh] md:h-[70vh] bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 relative flex items-center justify-center overflow-hidden">
-        <div id="clouds" ref={cloudsRef} className="absolute inset-0 z-0"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30"></div>
+        <div className="relative z-10 w-48 h-48 md:w-52 md:h-52 flex items-center justify-center mt-16">
+          <Image
+            src="/images/n-power-plus.png"
+            alt="Nパワープラス"
+            fill
+            className="mx-auto"
+            priority
+          />
+        </div>
       </div>
     </header>
   );
