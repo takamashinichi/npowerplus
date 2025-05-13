@@ -32,7 +32,7 @@ export default function InfoSection() {
         </div>
         <div className="w-full md:w-1/2 h-[240px] md:h-[300px] relative rounded-lg overflow-hidden">
           <Image
-            src="/images/items/n-power.avif"
+            src="https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power.avif"
             alt="Nパワープラス® 製品画像"
             fill
             className="object-contain"
@@ -45,7 +45,7 @@ export default function InfoSection() {
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center mb-4 md:mb-16 opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
         <div className="w-full md:w-1/2 order-2 md:order-1 h-[240px] md:h-[300px] relative rounded-lg overflow-hidden">
           <Image
-            src="/images/items/tenkeiriki.avif"
+            src="https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/tenkeiriki.avif"
             alt="天恵力プラス 製品画像"
             fill
             className="object-contain"

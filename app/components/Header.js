@@ -9,10 +9,10 @@ export default function Header() {
   const [nextImageIndex, setNextImageIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const backgroundImages = [
-    '/images/visual/image_4.jpg',
-    '/images/visual/image_13.jpg',
-    '/images/visual/image_51.jpg',
-    '/images/visual/image_73.jpg'
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_4.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_13.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_51.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_73.jpg'
   ];
   
   useEffect(() => {

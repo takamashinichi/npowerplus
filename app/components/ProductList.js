@@ -28,43 +28,43 @@ export default function ProductList() {
       id: 1,
       name: '植物用肥料　Nパワープラス®（250ml）12本',
       price: '¥66,000',
-      image: '/images/items/n-power_12set.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_12set.avif'
     },
     {
       id: 2,
       name: '植物用肥料　Nパワープラス®（250ml）１本＋スプレー（350ml）１個',
       price: '¥6,600',
-      image: '/images/items/n-power_ spray.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_ spray.avif'
     },
     {
       id: 3,
       name: '植物用肥料　Nパワープラス®（250ml）３本',
       price: '¥16,500',
-      image: '/images/items/n-power_3set.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_3set.avif'
     },
     {
       id: 4,
       name: '植物用肥料　Nパワープラス®（250ml）１本',
       price: '¥5,500',
-      image: '/images/items/n-power_1set.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_1set.avif'
     },
     {
       id: 5,
       name: '植物用肥料　Nパワープラス®（1L）１本',
       price: '¥16,500',
-      image: '/images/items/n-power_1l.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_1l.avif'
     },
     {
       id: 6,
       name: '植物用肥料　Nパワープラス®（1L × 6本入り）１箱',
       price: '¥99,000',
-      image: '/images/items/n-power_1l-6.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/n-power_1l-6.avif'
     },
     {
       id: 7,
       name: '動物用飼料　天恵力プラス®（10L × 1本入り）１箱',
       price: '¥88,000',
-      image: '/images/items/tenkeiriki_10l.avif'
+      image: 'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/items/tenkeiriki_10l.avif'
     }
   ];
   

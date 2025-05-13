@@ -7,12 +7,12 @@ import { useState } from 'react';
 export default function ProductInfo() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    '/images/visual/image_6.jpg',
-    '/images/visual/image_8.jpg',
-    '/images/visual/image_11.jpg',
-    '/images/visual/image_24.jpg',
-    '/images/visual/image_28.jpg',
-    '/images/visual/image_56.jpg'
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_6.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_8.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_11.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_24.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_28.jpg',
+    'https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/image_56.jpg'
   ];
 
   const handlePrev = () => {
@@ -57,7 +57,7 @@ export default function ProductInfo() {
           <div className="flex justify-center space-x-6 mb-12">
             <Link href="/faq" className="block w-1/2 hover:opacity-80 transition-opacity">
               <Image
-                src="/images/visual/faq-button.avif"
+                src="https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/faq-button.avif"
                 alt="FAQ"
                 width={800}
                 height={200}
@@ -66,7 +66,7 @@ export default function ProductInfo() {
             </Link>
             <Link href="/support" className="block w-1/2 hover:opacity-80 transition-opacity">
               <Image
-                src="/images/visual/support-button.avif"
+                src="https://n-powerplus.s3.ap-northeast-1.amazonaws.com/images/visual/support-button.avif"
                 alt="サポート"
                 width={800}
                 height={200}
