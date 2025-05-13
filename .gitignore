@@ -31,3 +31,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# images
+public/images/
+images/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.avif
